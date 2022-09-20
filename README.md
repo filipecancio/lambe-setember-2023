@@ -13,4 +13,5 @@
 ### Referencial teórico
 ### Justificativa
 ## Objetivos
+> Deve ser apresentado o objetivo geral e os específicos do trabalho. Considera-se suficiente o número de 3 objetivos específicos. Menos que essa quantidade, considera-se de escopo insuficiente o trabalho. Acima disso, o tamanho do escopo pode excessivamente grande para um trabalho de graduação.
 ## Metodologia
