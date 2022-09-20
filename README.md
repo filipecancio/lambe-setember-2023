@@ -15,3 +15,14 @@
 ## Objetivos
 > Deve ser apresentado o objetivo geral e os específicos do trabalho. Considera-se suficiente o número de 3 objetivos específicos. Menos que essa quantidade, considera-se de escopo insuficiente o trabalho. Acima disso, o tamanho do escopo pode excessivamente grande para um trabalho de graduação.
 ## Metodologia
+> Devem ser apresentados as metodologias científicas adequadas a serem utilizadas durante o trabalho, além das técnicas próprias da área de Sistemas de Informação. Por se tratar de uma importante parte deste trabalho, a metodologia deverá ser bem delineada e se possível exaustiva, não se permitindo a criação de lacunas metodológicas.
+## Cronograma
+> Nesta seção, poderá ser proposto pelo aluno um cronograma para a condução de seus trabalhos na disciplina de TCC I. Por se considerar a relativa falta de experiência do aluno na escrita científica para este estágio, esta seção é facultativa.
+## Referências
+> Deverão seguir a norma NBR 6023 (Referências), como por exemplo:
+>
+>BARRIONUEVO, Alexei. After Deadly Mudslides in Brazil, Concern Turns to Preparedness. The New York Times, New York, 16/01/2011.
+>
+> ou
+>
+> COELHO, Gustavo Brasileiro. Análise e Simulação de Transformação de Chuva em Vazão com Suporte de Sistema de informações Geográficas (SIG). Dissertação (Programa de Pós-Graduação em Ciências Geodésicas e Tecnologias da Geoinformação) - Universidade Federal de Pernambuco (UFPE), Recife, 2003.
