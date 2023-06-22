@@ -19,6 +19,7 @@
 % \RequirePackage{cite}
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass[12pt,a4paper,oneside]{book} % classe base a ser modificada
+\ProvidesClass{./classe/abntex2.cls}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -202,12 +203,6 @@
 % Comandos e ambientes de editoracao CITACAO, ALINEA, INCISO, ASSINATURA
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
-
-
-\providecommand{\ABNTEXistwocolumn}{false}
-\DeclareOption{twocolumn}{
-\renewcommand{\ABNTEXistwocolumn}{true}
-\PassOptionsToClass{twocolumn}{memoir}%}
 
 % ---
 % Citacao direta com mais de 3 linhas - ABNT NBR 10520/2002 - 5.3
