@@ -24,8 +24,20 @@ jobs:
           working_directory: monograph/
           continue_on_error: true
 
-      - name: Upload PDF file
+      - name: Upload PDF file1
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
+          name: PDF1
           path: out/a_PFC_main.pdf
+
+      - name: Upload PDF file2
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF2
+          path: a_PFC_main.pdf
+
+      - name: Upload PDF file3
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF3
+          path: monograph/a_PFC_main.pdf
