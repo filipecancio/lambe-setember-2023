@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Template LaTeX
+%  classe: classe_PFC_IFBA_VDC.cls
+%  compilador: pdfLaTeX ou XeLaTeX
+%
+%  PFC - Projeto de Fim de Curso Engenharia Elétrica (COEEL) - IFBA campus Vitória da Conquista e Modelo de Relatório
+%
+%  Este é um template (modelo) LaTeX que NÃO possui a intenção de seguir a norma ABNT-NBR14724 - Trabalhos Acadêmicos, porém estaremos seguindo as definições da norma ABNT-NBR6023 - Referências
+%
+%  Template criado para atender às demandas de Projeto Final de Curso (PFC) e Relatórios Técnicos de Engenharia Elétrica do IFBA campus Vitória da Conquista
+%
+%  versão 2023.06.06
+%  Criado por: prof. Elvio Prado da Silva
+%
+%  distribuição e modificação autorizada desde que mantenha os créditos das pessoas que trabalharam neste template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter % permitir que o símbolo @ seja usado em comandos de macro
+
+\documentclass[pfc]{./classe/cls-PFC-COEEL}
+%\documentclass[relatorio]{./classe/cls-PFC-COEEL}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABNT-NBR6023 norma para citações bibliográficas
+\usepackage[alf]{abntex2cite} 
+
+\input{components/capa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CONFIGURA O ÍNDICE REMISSIVO
+% configuração das letras em classe/estiloindice.ist
+\makeindex[columns=3, title=ÍNDICE REMISSIVO, 
+           options= -s classe/estiloindice.ist] 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% INICIA O PACOTE PARA GLOSSÁRIO
+\loadglsentries{components/glossario.tex}
+\makeglossaries
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% BEGIN DOCUMENT %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{document}
+
+%%% 
+\input{./classe/inicio}
+%%%
+% comentar esta linha para seu trabalho
+\include{components/Template} % utilizando o Template
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifbool{pfc}{ % se é PFC
+   \include{./PFC_Especificos/g_Introd_Objetivos} 
+   \include{./PFC_Especificos/h_Referencial_Teorico}
+   \include{./PFC_Especificos/i_Metodologia}
+}{}
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  AQUI VÃO OS SEUS CAPÍTULOS 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% adicione aqui seus capítulos adicionais
+%\include{}
+\include{components/Seu_Trabalho}
+
+\input{./classe/fim}
+
+\end{document}

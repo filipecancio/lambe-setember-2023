@@ -1,0 +1,31 @@
+name: Create TCC File
+
+on:
+  push:
+    branches: [ "main","feature_latex" ]
+  pull_request:
+    branches: [ "main","feature_latex" ]
+
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: a_PFC_main.tex
+          working_directory: monograph/
+          continue_on_error: true
+
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: tcc-lambe-filipe-cancio
+          path: monograph/a_PFC_main.pdf
