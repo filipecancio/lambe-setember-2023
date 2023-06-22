@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Template LaTeX 
+%  Template LaTeX
 %  classe: classe_PFC_IFBA_VDC.cls
-%  compilador: pdfLaTeX ou XeLaTeX 
+%  compilador: pdfLaTeX ou XeLaTeX
 %
 %  PFC - Projeto de Fim de Curso Engenharia Elétrica (COEEL) - IFBA campus Vitória da Conquista e Modelo de Relatório
 %
@@ -10,18 +10,13 @@
 %  Template criado para atender às demandas de Projeto Final de Curso (PFC) e Relatórios Técnicos de Engenharia Elétrica do IFBA campus Vitória da Conquista
 %
 %  versão 2023.06.06
-%  Criado por: prof. Elvio Prado da Silva 
+%  Criado por: prof. Elvio Prado da Silva
 %
 %  distribuição e modificação autorizada desde que mantenha os créditos das pessoas que trabalharam neste template
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter % permitir que o símbolo @ seja usado em comandos de macro 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% DOCUMENTCLASS %%%%%%%%%
-%
-% [pfc] caso seja PFC - Projeto Final de Curso
-% [relatorio] caso seja RELATÓRIO de disciplina
-%
+
+\makeatletter % permitir que o símbolo @ seja usado em comandos de macro
+
 \documentclass[pfc]{./classe/cls-PFC-COEEL}
 %\documentclass[relatorio]{./classe/cls-PFC-COEEL}
 %
@@ -29,13 +24,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ABNT-NBR6023 norma para citações bibliográficas
 \usepackage[alf]{abntex2cite} 
-%
-% adicione aqui seus pacotes adicionais
-% \usepackage{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Documento que cria a Capa e a folha de Rosto
-\input{b_Capa}
+
+\input{components/capa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% CONFIGURA O ÍNDICE REMISSIVO
 % configuração das letras em classe/estiloindice.ist
@@ -44,7 +34,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% INICIA O PACOTE PARA GLOSSÁRIO
-\loadglsentries{GLOSSARIO.tex}
+\loadglsentries{components/glossario.tex}
 \makeglossaries
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -58,7 +48,7 @@
 \input{./classe/inicio}
 %%%
 % comentar esta linha para seu trabalho
-\include{Template} % utilizando o Template
+\include{components/Template} % utilizando o Template
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifbool{pfc}{ % se é PFC
@@ -66,26 +56,16 @@
    \include{./PFC_Especificos/h_Referencial_Teorico}
    \include{./PFC_Especificos/i_Metodologia}
 }{}
+
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%  AQUI VÃO OS SEUS CAPÍTULOS 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % adicione aqui seus capítulos adicionais
 %\include{}
-\include{Seu_Trabalho}
-% \include{}
-% \include{}
-% \include{}
-% \include{}
-% \include{}
-%
-%%% não altere este documento 
+\include{components/Seu_Trabalho}
+
 \input{./classe/fim}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
 \end{document}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%  FIM  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
