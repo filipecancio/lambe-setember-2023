@@ -19,7 +19,7 @@
 % \RequirePackage{cite}
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass[12pt,a4paper,oneside]{book} % classe base a ser modificada
-\ProvidesClass{./classe/abntex2.cls}
+\LoadClass{./classe/abntex2.cls}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
