@@ -18,8 +18,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \RequirePackage{cite}
 \NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{abntex2}[2018/11/24 v-1.9.7 abnTeX2]
 \LoadClass[12pt,a4paper,oneside]{book} % classe base a ser modificada
-\ProvidesClass{./classe/abntex2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
