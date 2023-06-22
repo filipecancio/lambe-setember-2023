@@ -1,37 +1,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
 %  Template LaTeX 
 %  classe: classe_PFC_IFBA_VDC.cls
+%  compilador: pdfLaTeX ou XeLaTeX 
 %
-%  PFC - Projeto de Fim de Curso 
-%  Bacharelado Sistemas de informação (BSI)
-%  IFBA campus Vitória da Conquista
-%  e Modelo de Relatório
+%  PFC - Projeto de Fim de Curso Engenharia Elétrica (COEEL) - IFBA campus Vitória da Conquista e Modelo de Relatório
 %
-%  Este é um template (modelo) LaTeX que  
-%  NÃO possui a intenção de seguir a 
-%  norma ABNT-NBR14724 - Trabalhos Acadêmicos,
-%  porém estaremos seguindo as definições da
-%  norma ABNT-NBR6023 - Referências
+%  Este é um template (modelo) LaTeX que NÃO possui a intenção de seguir a norma ABNT-NBR14724 - Trabalhos Acadêmicos, porém estaremos seguindo as definições da norma ABNT-NBR6023 - Referências
 %
-%  Template criado para atender às demandas de
-%  Projeto Final de Curso (PFC) e Relatórios
-%  Técnicos de BSI com base em modelo utilizado em Engenharia Elétrica do
-%  IFBA campus Vitória da Conquista
+%  Template criado para atender às demandas de Projeto Final de Curso (PFC) e Relatórios Técnicos de Engenharia Elétrica do IFBA campus Vitória da Conquista
 %
-%
-%  versão 2023.04.17
+%  versão 2023.06.06
 %  Criado por: prof. Elvio Prado da Silva 
-%  versão atual 2023.05.16
-%  Editado por: Ediomar Aguiar Nogueira
-%  
-%  distribuição e modificação autorizada desde
-%  que mantenha os créditos das pessoas que 
-%  trabalharam neste template
+%
+%  distribuição e modificação autorizada desde que mantenha os créditos das pessoas que trabalharam neste template
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \makeatletter % permitir que o símbolo @ seja usado em comandos de macro 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% DOCUMENTCLASS %%%%%%%%%
 %
@@ -39,349 +23,65 @@
 % [relatorio] caso seja RELATÓRIO de disciplina
 %
 \documentclass[pfc]{./classe/cls-PFC-COEEL}
-
 %\documentclass[relatorio]{./classe/cls-PFC-COEEL}
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\usepackage[alf]{abntex2cite} % ABNT-NBR6023 norma para citações bibliográficas
-\usepackage{longtable}
-\usepackage{setspace}
-\usepackage{array}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABNT-NBR6023 norma para citações bibliográficas
+\usepackage[alf]{abntex2cite} 
+%
 % adicione aqui seus pacotes adicionais
 % \usepackage{}
-% \usepackage{}
-% \usepackage{}
-% \usepackage{}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% TÍTULO DO PFC OU RELATÓRIO
-% Preencha aqui o título do seu trabalho:
-% 
-\Titulo{MeuPetAqui: Rede Social para tutores de pets e Ongs de Vitória da Conquista}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% AUTOR
-% PFC: Preencha o seu nome completo aqui
-% Relatórios: caso seja trabalho em grupo, 
-% separe os nomes dos membros da equipe por \\
-%
-% se é PFC 
-\ifbool{pfc}{
-    \Autor{Ediomar Aguiar Nogueira}
-}{}
-%
-% se é RELATÓRIO 
-\ifbool{relatorio}{
-    \Autor{Nome do estudante 1 \\ Nome do estudante 2 \\ nome do estudante 3}
-}{} % se for mais de um estudante, separe
-%     os nomes por \\ 
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% DISCIPLINA E PROFESSOR
-% preencher apenas para RELATÓRIOS
-%
-\Professor{Nome do professor da disciplina}
-%
-\Disciplina{Nome da Disciplina}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% ORIENTADOR E COORIENTADOR
-% preencher apenas para PFC
-%
-%\adviser[F]{Joaquina Madalena}
-%\orientador[M]{João José}
-%
-\Orientador{\textbf{Orientador:} Prof.Dr. Djan Almeida Santos}
-%\Coorientador{\textbf{Coorientador:} Nome do Coorientador}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% DATA DA DEFESA 
-%%%% ou DATA DA ENTREGA DO RELATÓRIO
-%
-% \DataDefesa{23 de março de 2023}
-\DataDefesa{20 de Junho de 2023}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% CIDADE ONDE OCORREU A DEFESA
-%
-\CidadeDefesa{Vitória da Conquista-BA}
-%
+% Documento que cria a Capa e a folha de Rosto
+\input{b_Capa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% CONFIGURA O ÍNDICE REMISSIVO
-%
 % configuração das letras em classe/estiloindice.ist
-%
 \makeindex[columns=3, title=ÍNDICE REMISSIVO, 
            options= -s classe/estiloindice.ist] 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% INICIA O PACOTE PARA GLOSSÁRIO
-%
-\loadglsentries{g_Glossario.tex}
+\loadglsentries{GLOSSARIO.tex}
 \makeglossaries
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% BEGIN DOCUMENT %%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \begin{document}
 
-\pagestyle{EstiloPFC} % Estilo de página criado para o PFC do IFBA VDC
-
-\pagenumbering{roman} % páginas em algarismos romanos
-
-%%%% espaçamento 1,5 entre linhas
-\onehalfspacing
-%%%% numeração da página em romano 
-%\frontmatter 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% CAPA 
+%%% 
+\input{./classe/inicio}
+%%%
+% comentar esta linha para seu trabalho
+\include{Template} % utilizando o Template
 %
-% se é PFC faz capa de PFC
-\ifbool{pfc}{
-    \CapaPFC
-}{}
- 
-% se é Relatório faz capa de Relatório
-\ifbool{relatorio}{
-    \CapaREL
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% FOLHA DE ROSTO
-% apenas para PFC
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifbool{pfc}{ % se é PFC
-    \newpage\clearpage\pagebreak
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Folha de Rosto}
-    \FolhaRosto%
+   \include{./PFC_Especificos/g_Introd_Objetivos} 
+   \include{./PFC_Especificos/h_Referencial_Teorico}
+   \include{./PFC_Especificos/i_Metodologia}
 }{}
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% FICHA CATALOGRÁFICA
-% apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage\pagebreak
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Ficha Catalográfica}
-    % inclua o PDF da ficha catalográfica feita pela biblioteca
-    \includepdf[pages=1]{Ficha_Catalografica.pdf}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% FOLHA DE APROVAÇÃO
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Folha de Aprovação}
-    
-    % inclua o PDF da folha de aprovação assinada digitalmente pelos membros da banca pelo SEI ou pelo SOU.GOV:
-
-    % \includepdf[pages=1]{Folha_Aprovacao.pdf} % descomente esta linha quando for anexar o PDF
-
-    % comente esta linha quando for anexar o PDF
-    \include{b_FolhaAprovacao} 
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% DEDICATÓRIA
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \include{c_Dedicatoria}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% AGRADECIMANTOS
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \include{d_Agradecimentos}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% RESUMO
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Resumo}
-    \include{e_Resumo}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% ABSTRACT
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Abstract}
-    \include{f_Abstract}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% LISTA DE FIGURAS
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{\listfigurename}
-    \listoffigures
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% LISTA DE TABELAS
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \clearpage\newpage
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{\listtablename}
-    \listoftables
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% LISTA DE CÓDIGOS
-%
-% Apenas para PFC
-%
-% LISTA DE CÓDIGOS APAGADO
-% \ifbool{pfc}{ % se é PFC
-%     \clearpage\newpage
-%     \newcommand{\lstlistoflistingsname}{Lista de Códigos}
-%     \renewcommand{\lstlistingname}{Código}
-%     \addcontentsline{toc}{chapter}{Lista de Códigos\numberline{}}
-%     \lstlistoflistings
-% }{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% GLOSSÁRIO
-%%%% LISTA DE SÍMBOLOS E SIGLAS
-%
-% https://pt.overleaf.com/learn/latex/Glossaries
-%
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \clearpage\newpage\pagebreak
-    \renewcommand{\glossaryname}{Glossário: Símbolos e Siglas}
-    \addcontentsline{toc}{chapter}{\glossaryname}
-    \renewcommand{\pagelistname}{Páginas}%
-    \printglossary[style=long3col-booktabs]
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% SUMÁRIO
-%
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \clearpage\pagebreak\newpage
-    \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % capítulos do sumário com linha de pontos
-    \tableofcontents
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\pagestyle{EstiloPFC} % estilo criado para este PFC
-\clearpage\pagebreak\newpage
-
-\onehalfspacing % espaçamento 1,5 entre linhas
-\pagenumbering{arabic}  % numeração das páginas em algarismos arábicos
-
-\makeatother %  restringir o uso do símbolo @ em comandos de macro
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%  AQUI VÃO OS SEUS CAPÍTULOS 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%
-\include{h_Introd_Objetivos}
-\include{j_Metodologia}
-\include{i_Referencial_Teorico}
-\include{k_Seu_Trabalho}
-
 % adicione aqui seus capítulos adicionais
+%\include{}
+\include{Seu_Trabalho}
 % \include{}
 % \include{}
 % \include{}
 % \include{}
+% \include{}
+%
+%%% não altere este documento 
+\input{./classe/fim}
 
-%
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-
-\include{l_Consideracoes_Finais}
-\include{m_Sugestoes_Trab_Futuros}
-
-}{}
-%
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% REFERÊNCIAS
-%
-\ifpdf\phantomsection\fi
-\addcontentsline{toc}{chapter}{REFERÊNCIAS}
-\renewcommand{\bibname}{REFERÊNCIAS}
-\bibliography{bib_pfc} % nome do seu arquivo bib
-\label{cap:RefBib}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% AQUI VÃO SEUS APÊNDICES %%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% APÊNDICE são textos criados pelo próprio autor para complementar sua argumentação (ABNT NBR14724)
-%
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \Apendices
-    \include{y_Apendices}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% AQUI VÃO SEUS ANEXOS  %%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ANEXOS são documentos criados por terceiros, e usados pelo autor (ABNT NBR14724)
-%
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \Anexos
-    \include{z_Anexos}
-}{}
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% ÍNDICE REMISSIVO
-%
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \clearpage\pagebreak\newpage
-    \ifpdf\phantomsection\fi
-    \renewcommand{\indexname}{ÍNDICE REMISSIVO}
-    \addcontentsline{toc}{chapter}{\indexname}
-    \printindex  % índice remissivo
-}{}
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \end{document}

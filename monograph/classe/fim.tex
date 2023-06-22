@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Este documento pertence à classe cls-PFC-COEEL.cls
+% NÃO ALTERE NADA AQUI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Apenas para PFC
+%
+\ifbool{pfc}{ % se é PFC
+   \include{./PFC_Especificos/j_Consideracoes_Finais}
+   \include{./PFC_Especificos/k_Sugestoes_Trab_Futuros}
+}{}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% REFERÊNCIAS
+%
+\ifpdf\phantomsection\fi
+\addcontentsline{toc}{chapter}{REFERÊNCIAS}
+\renewcommand{\bibname}{REFERÊNCIAS}
+\bibliography{BIB_pfc} % nome do seu arquivo bib
+\label{cap:RefBib}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% AQUI VÃO SEUS APÊNDICES %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APÊNDICE são textos criados pelo próprio autor para complementar sua argumentação (ABNT NBR14724)
+%
+% Apenas para PFC
+%
+\ifbool{pfc}{ % se é PFC
+    \Apendices
+    \include{./PFC_Especificos/l_Apendices}
+}{}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% AQUI VÃO SEUS ANEXOS  %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANEXOS são documentos criados por terceiros, e usados pelo autor (ABNT NBR14724)
+%
+% Apenas para PFC
+%
+\ifbool{pfc}{ % se é PFC
+    \Anexos
+    \include{./PFC_Especificos/m_Anexos}
+}{}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% ÍNDICE REMISSIVO
+%
+% Apenas para PFC
+%
+\ifbool{pfc}{ % se é PFC
+    \clearpage\pagebreak\newpage
+    \ifpdf\phantomsection\fi
+    \renewcommand{\indexname}{ÍNDICE REMISSIVO}
+    \addcontentsline{toc}{chapter}{\indexname}
+    \printindex  % índice remissivo
+}{}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
