@@ -44,7 +44,7 @@
 \RequirePackage{amsmath,amsfonts,amssymb} % pacotes matemáticos
 \RequirePackage{array} % pacote matemático
 \RequirePackage{newtxmath} % fonte matemática
-% \RequirePackage{setspace} % pacote (espaçamento)
+\RequirePackage{setspace} % pacote (espaçamento)
 \RequirePackage{indentfirst} % indentação do primeiro parágrafo
 \RequirePackage{fancybox} % caixas bonitas
 \RequirePackage[dvipsnames, table]{xcolor} % pacote de cores
@@ -73,8 +73,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Formatação básica:
 %
-
-\onehalfspacing
+\onehalfspacing % espaçamento 1.5 entre linhas
 \setlength{\parindent}{30pt} % indentação do parágrafo
 \setlength{\parskip}{10pt} % espaçamento entre parágrafos
 
