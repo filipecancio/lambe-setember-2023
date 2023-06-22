@@ -73,7 +73,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Formatação básica:
 %
-\onehalfspacing % espaçamento 1.5 entre linhas
+%\onehalfspacing % espaçamento 1.5 entre linhas
 \setlength{\parindent}{30pt} % indentação do parágrafo
 \setlength{\parskip}{10pt} % espaçamento entre parágrafos
 
