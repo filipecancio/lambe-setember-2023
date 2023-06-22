@@ -56,6 +56,14 @@
 \usepackage{etoolbox}
 
 %
+% Captura as options article e twocolumn
+%
+\providecommand{\ABNTEXistwocolumn}{false}
+\DeclareOption{twocolumn}{
+    \renewcommand{\ABNTEXistwocolumn}{true}
+    \PassOptionsToClass{twocolumn}{memoir}%}
+
+%
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% DECLARA PFC E RELATÓRIO
