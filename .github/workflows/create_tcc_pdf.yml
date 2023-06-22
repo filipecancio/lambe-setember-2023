@@ -21,6 +21,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: a_PFC_main.tex
+          working_directory: monograph/
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
