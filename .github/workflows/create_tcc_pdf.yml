@@ -1,0 +1,26 @@
+name: Create TCC File
+
+on:
+  push:
+    branches: [ "main","feature_latex" ]
+  pull_request:
+    branches: [ "main","feature_latex" ]
+
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
