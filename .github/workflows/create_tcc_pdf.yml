@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: a_PFC_main.pdf
+          path: out/a_PFC_main.pdf
