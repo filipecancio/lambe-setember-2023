@@ -212,26 +212,7 @@
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
 
-% ---
-% Citacao direta com mais de 3 linhas - ABNT NBR 10520/2002 - 5.3
-\newlength{\ABNTEXcitacaorecuo}% recuo de 4 cm da margem esquerda
-\ifthenelse{\equal{\ABNTEXistwocolumn}{true}}{%
-  \setlength{\ABNTEXcitacaorecuo}{1.8cm}
-}{% else
-  \setlength{\ABNTEXcitacaorecuo}{4cm}
-}
-\newenvironment*{citacao}[1][default]{%
-   \list{}%
-   \ABNTEXfontereduzida%
-   \addtolength{\leftskip}{\ABNTEXcitacaorecuo}%
-   \item[]%
-   \begin{SingleSpace}%
-   \small\itshape% <--- Define tamanho "small" e estilo "itálico"
-   \ifthenelse{\not\equal{#1}{default}}{\itshape\selectlanguage{#1}}{}%
- }{%
-   \end{SingleSpace}%
-   \endlist}%
-% ---
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
