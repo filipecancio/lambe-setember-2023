@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: Github Action for LaTeX
         uses: Sakul6499/GitHub-Action-LaTeX@v1.0.0
