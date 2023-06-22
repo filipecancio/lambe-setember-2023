@@ -203,6 +203,12 @@
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
 
+
+\providecommand{\ABNTEXistwocolumn}{false}
+\DeclareOption{twocolumn}{
+\renewcommand{\ABNTEXistwocolumn}{true}
+\PassOptionsToClass{twocolumn}{memoir}%}
+
 % ---
 % Citacao direta com mais de 3 linhas - ABNT NBR 10520/2002 - 5.3
 \newlength{\ABNTEXcitacaorecuo}% recuo de 4 cm da margem esquerda
