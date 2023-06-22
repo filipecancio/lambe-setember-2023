@@ -15,15 +15,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Github Action for LaTeX
-        uses: Sakul6499/GitHub-Action-LaTeX@v1.0.0
+        uses: xu-cheng/latex-action@v2
         with:
-          latex_main_file: a_PFC_main.tex
+          root_file: a_PFC_main.tex
           working_directory: monograph/
-          latex_compiler: latexmk
-          latex_compiler_arguments: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode"
+          continue_on_error: true
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
