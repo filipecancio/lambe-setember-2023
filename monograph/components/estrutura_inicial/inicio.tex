@@ -1,94 +1,57 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Este documento faz parte da classe cls-PFC-COEEL.cls
-% NÃO ALTERE NENHUM DADO AQUI.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{EstiloPFC} % Estilo de página criado para o PFC do IFBA VDC
-%%%% numeração da página em romano 
-\pagenumbering{roman} 
-%%%% espaçamento 1,5 entre linhas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Baseado no template:
+%  PFC - Projeto de Fim de Curso Engenharia Elétrica (COEEL) - IFBA campus Vitória da Conquista e Modelo de Relatório
+%  versão 2023.06.06
+%  Criado por: prof. Elvio Prado da Silva
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{EstiloPFC}
+\pagenumbering{roman}
 \onehalfspacing
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% CAPA 
-%
-% se é PFC faz capa de PFC
 
-\ifbool{pfc}{
-    \CapaPFC
-}{}
-    
-% se é Relatório faz capa de Relatório
-\ifbool{relatorio}{
-    \CapaREL
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CapaPFC
+
 %%%% FOLHA DE ROSTO
-% apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage\pagebreak
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Folha de Rosto}
-    \FolhaRosto%
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage\clearpage\pagebreak
+\ifpdf\phantomsection\fi
+\addcontentsline{toc}{chapter}{Folha de Rosto}
+\FolhaRosto%
+
+
 %%%% FICHA CATALOGRÁFICA
-% apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage\pagebreak
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Ficha Catalográfica}
-    % inclua o PDF da ficha catalográfica feita pela biblioteca
-    \includepdf[pages=1]{./PFC_Especificos/Ficha_Catalografica.pdf}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage\clearpage\pagebreak
+\ifpdf\phantomsection\fi
+\addcontentsline{toc}{chapter}{Ficha Catalográfica}
+% inclua o PDF da ficha catalográfica feita pela biblioteca
+\includepdf[pages=1]{./PFC_Especificos/Ficha_Catalografica.pdf}
+
+
 %%%% FOLHA DE APROVAÇÃO
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Folha de Aprovação}
-    
-    % inclua o PDF da folha de aprovação assinada digitalmente pelos membros da banca pelo SEI ou pelo SOU.GOV:
+\newpage\clearpage
+\ifpdf\phantomsection\fi
+\addcontentsline{toc}{chapter}{Folha de Aprovação}
 
-    % \includepdf[pages=1]{Folha_Aprovacao.pdf} % descomente esta linha quando for anexar o PDF
+% inclua o PDF da folha de aprovação assinada digitalmente pelos membros da banca pelo SEI ou pelo SOU.GOV:
+% \includepdf[pages=1]{Folha_Aprovacao.pdf} % descomente esta linha quando for anexar o PDF
+% comente esta linha quando for anexar o PDF
+\include{./PFC_Especificos/b_FolhaAprovacao}
 
-    % comente esta linha quando for anexar o PDF
-    \include{./PFC_Especificos/b_FolhaAprovacao} 
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%% DEDICATÓRIA
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \include{./PFC_Especificos/c_Dedicatoria}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./PFC_Especificos/c_Dedicatoria}
+
+
 %%%% AGRADECIMANTOS
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \include{./PFC_Especificos/d_Agradecimentos}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./PFC_Especificos/d_Agradecimentos}
+
+
 %%%% RESUMO
-% Apenas para PFC
-%
-\ifbool{pfc}{ % se é PFC
-    \newpage\clearpage
-    \ifpdf\phantomsection\fi
-    \addcontentsline{toc}{chapter}{Resumo}
-    \include{./PFC_Especificos/e_Resumo}
-}{}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage\clearpage
+\ifpdf\phantomsection\fi
+\addcontentsline{toc}{chapter}{Resumo}
+\include{./PFC_Especificos/e_Resumo}
+
+
 %%%% ABSTRACT
 % Apenas para PFC
 %

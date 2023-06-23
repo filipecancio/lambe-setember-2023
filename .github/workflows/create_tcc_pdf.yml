@@ -20,7 +20,7 @@ jobs:
       - name: Github Action for LaTeX
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: a_PFC_main.tex
+          root_file: main.tex
           working_directory: monograph/
           continue_on_error: true
 
@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: tcc-lambe-filipe-cancio
-          path: monograph/a_PFC_main.pdf
+          path: monograph/main.pdf
