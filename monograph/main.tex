@@ -22,7 +22,11 @@
     \include{components/tcc_1/metodologia}
     \include{components/tcc_1/referencial_teorico}
 
-    \bibliography{components/estrutura_final/bibliografia}
+    \ifpdf\phantomsection\fi
+    \addcontentsline{toc}{chapter}{REFERÊNCIAS}
+    \renewcommand{\bibname}{REFERÊNCIAS}
+    \bibliography{bibliography}
+    \label{cap:RefBib}
 
 
 % \include{components/Seu_Trabalho}
