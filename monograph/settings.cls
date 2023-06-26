@@ -335,7 +335,7 @@
 \def\CapaPFC{%
   \thispagestyle{empty}%
 \begin{center}%
-     \includegraphics[width=\linewidth]{classe/LogosCapa.pdf}%
+     \includegraphics[width=\linewidth]{util/LogosCapa.pdf}%
      
      \Large
      \vspace{1.5cm}%
