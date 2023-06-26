@@ -1,20 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Template LaTeX 
-%  classe: classe_PFC_IFBA_VDC.cls
-%  compilador: pdfLaTeX ou XeLaTeX 
-%
-%  PFC - Projeto de Fim de Curso Engenharia Elétrica (COEEL) - IFBA campus Vitória da Conquista e Modelo de Relatório
-%
-%  Este é um template (modelo) LaTeX que NÃO possui a intenção de seguir a norma ABNT-NBR14724 - Trabalhos Acadêmicos, porém estaremos seguindo as definições da norma ABNT-NBR6023 - Referências
-%
-%  Template criado para atender às demandas de Projeto Final de Curso (PFC) e Relatórios Técnicos de Engenharia Elétrica do IFBA campus Vitória da Conquista
-%
-%  versão 2023.06.06
-%  Criado por: prof. Elvio Prado da Silva 
-%
-%  distribuição e modificação autorizada desde que mantenha os créditos das pessoas que trabalharam neste template
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass[12pt,a4paper,oneside]{book} % classe base a ser modificada
 
