@@ -22,6 +22,8 @@ jobs:
       -
         name: Create Release ${{ github.event.pull_request.title }}
         uses: bfren/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           token: ${{ secrets.PAT }}
 
