@@ -31,7 +31,7 @@ jobs:
           path: monograph/main.pdf
 
       - name: Upload PDF file to release
-        uses: softprops/action-gh-release
+        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
             files: monograph/main.pdf
