@@ -20,7 +20,7 @@ jobs:
       - name: Github Action for LaTeX
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
+          root_file: tcc-filipe-cancio.tex
           working_directory: monograph/
           continue_on_error: true
 
@@ -28,12 +28,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: tcc-cancio-${{ github.ref_name }}
-          path: monograph/main.pdf
+          path: monograph/tcc-filipe-cancio.pdf
+      - name: Upload Release Asset
 
-      - name: cho ver
-        run: ls
-
-      - name: Upload Release Assett
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload testtag monograph/main.pdf
+        run: gh release upload v0 monograph/tcc-filipe-cancio.pdf
