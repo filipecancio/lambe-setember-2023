@@ -34,4 +34,4 @@ jobs:
         uses: softprops/action-gh-release
         with:
           name: tcc-cancio-${{ github.ref_name }}
-          path: monograph/main.pdf
+          files: monograph/main.pdf
