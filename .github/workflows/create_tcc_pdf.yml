@@ -29,3 +29,9 @@ jobs:
         with:
           name: tcc-cancio-${{ github.ref_name }}
           path: monograph/main.pdf
+
+      - name: Upload PDF file to release
+        uses: softprops/action-gh-release
+        with:
+          name: tcc-cancio-${{ github.ref_name }}
+          path: monograph/main.pdf
