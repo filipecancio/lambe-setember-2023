@@ -28,4 +28,4 @@ jobs:
       - name: Upload Release Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload v0.0 monograph/tcc-filipe-cancio.pdf
+        run: gh release upload ${{ github.event.pull_request.title }} monograph/tcc-filipe-cancio.pdf
