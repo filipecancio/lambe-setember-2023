@@ -3,6 +3,7 @@ name: Create TCC File
 on:
   pull_request:
     branches: [ "feature/**" ]
+    types: [synchronize]
 
   workflow_dispatch:
 
