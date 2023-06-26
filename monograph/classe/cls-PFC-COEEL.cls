@@ -333,24 +333,15 @@
 % Capa de PFC
 \def\CapaPFC{%
   \thispagestyle{empty}%
-
-% código TikZ para os marcadores nos quatro cantos da capa
-\begin{tikzpicture}[remember picture, overlay]
-    \filldraw[fill={rgb,255:red,200;green,25;blue,30}] (current page.north west) -- ++(0,-40mm) -- ++(40mm,40mm) -- cycle;
-    \filldraw[fill={rgb,255:red,50;green,160;blue,65}] (current page.north east) -- ++(-40mm,0) -- ++(40mm,-40mm) -- cycle;
-    \filldraw[fill={rgb,255:red,50;green,160;blue,65}] (current page.south east) -- ++(0,40mm) -- ++(-40mm,-40mm) -- cycle;
-    \filldraw[fill={rgb,255:red,50;green,160;blue,65}] (current page.south west) -- ++(0,40mm) -- ++(40mm,-40mm) -- cycle;
-\end{tikzpicture}
-  
 \begin{center}%
      \includegraphics[width=\linewidth]{classe/LogosCapa.pdf}%
      
      \Large
      \vspace{1.5cm}%
-     \textbf{COORDENAÇÃO DE ENGENHARIA ELÉTRICA - COEEL}%
+     \textbf{COORDENAÇÃO DE SISTEMAS DE INFORMAÇÃO}%
      
      \vspace{0.1cm}%
-     \textbf{PROJETO FINAL DE CURSO - PFC}%
+     \textbf{TRABALHO DE CONCLUSÃO DE CURSO - TCC}%
 
      \vspace{3cm}%
      
@@ -370,45 +361,6 @@
 \clearpage\newpage\pagebreak
 \onehalfspacing % espaçamento 1,5 entre linhas
 %
-% Capa de RELATÓRIO
-\def\CapaREL{%
-  \thispagestyle{empty}%
-
-% código TikZ para os marcadores nos quatro cantos da capa
-\begin{tikzpicture}[remember picture, overlay]
-    \filldraw[fill={rgb,255:red,200;green,25;blue,30}] (current page.north west) -- ++(0,-40mm) -- ++(40mm,40mm) -- cycle;
-    \filldraw[fill={rgb,255:red,50;green,160;blue,65}] (current page.north east) -- ++(-40mm,0) -- ++(40mm,-40mm) -- cycle;
-    \filldraw[fill={rgb,255:red,50;green,160;blue,65}] (current page.south east) -- ++(0,40mm) -- ++(-40mm,-40mm) -- cycle;
-    \filldraw[fill={rgb,255:red,50;green,160;blue,65}] (current page.south west) -- ++(0,40mm) -- ++(40mm,-40mm) -- cycle;
-\end{tikzpicture}
-  
-\begin{center}%
-     \includegraphics[width=\linewidth]{classe/LogosCapa.pdf}%
-     
-     \Large
-     \vspace{1.0cm}%
-     \textbf{COORDENAÇÃO DE ENGENHARIA ELÉTRICA - COEEL} \\     
-     \vspace{1mm}%
-     \textbf{RELATÓRIO}\\
-     \vspace{1mm}
-     \textbf{Disciplina: \@Disciplina} \\
-     \vspace{1mm} 
-     Prof.: \@Professor%
-
-     \vspace{2cm}%
-     
-     \@Titulo%
-
-     \vspace{2.5cm}%
-     \MakeUppercase{\textbf{\@Autor}}%
-  
-     \vfill % leva para o botton da página
-     \@Cidade \\     
-     \vspace{0.1cm}%
-     \@Data%
-
-\end{center}%
-}%
 %
 \clearpage\newpage\pagebreak
 %%%% espaçamento 1,5 entre linhas

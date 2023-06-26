@@ -5,7 +5,7 @@
 \usepackage[alf]{abntex2cite}
 \usepackage{glossaries}
 
-\input{components/capa}
+\input{components/estrutura_inicial/capa}
 
 \makeindex[columns=3, title=ÍNDICE REMISSIVO,
     options= -s classe/estiloindice.ist]
@@ -14,9 +14,7 @@
 \makeglossaries
 
 \begin{document}
-
-%\input{./classe/inicio}
-%\include{components/Template}
+    \input{./components/estrutura_inicial/inicio}
 
     \include{components/tcc_1/introducao}
     \include{components/tcc_1/metodologia}
