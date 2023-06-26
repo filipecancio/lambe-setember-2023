@@ -78,6 +78,7 @@
 \definecolor{verdeifba}{RGB}{50,160,65}
 \definecolor{vermelhoifba}{RGB}{200,25,30}
 \definecolor{verdeescuro}{RGB}{0,128,0}
+\definecolor{black}{RGB}{0,0,0}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -298,10 +299,10 @@
 
 \hypersetup{colorlinks,
   debug=false,
-  linkcolor=blue,  %%% cor do tableofcontents, \ref, \footnote, etc
-  citecolor=verdeescuro,  %%% cor do \cite
-  urlcolor=blue,   %%% cor do \url e \href
-  filecolor=vermelhoifba,
+  linkcolor=black,  %%% cor do tableofcontents, \ref, \footnote, etc
+  citecolor=black,  %%% cor do \cite
+  urlcolor=black,   %%% cor do \url e \href
+  filecolor=black,
   bookmarksopen=true,
   pdftitle={PFC - Projeto Final de Curso de Engenharia Elétrica do IFBA campus Vitória da Conquista - COEEL},
   pdfauthor={Estudante de Engenharia Elétrica},
@@ -382,7 +383,7 @@
   \begin{flushright}%
     \begin{minipage}{8.5cm}%
        {\singlespacing \normalsize 
-       Projeto Final de Curso apresentado ao Curso de Graduação em Engenharia Elétrica do Instituto Federal de Educação, Ciência e Tecnologia da Bahia, \textit{campus} Vitória da Conquista, como requisito parcial para obtenção do título de Bacharel em Engenharia Elétrica.\\
+       Projeto de Monografia apresentado como requisito parcial de avaliação da disciplina Trabalho de Conclusão de Curso I, do curso de Sistemas de Informação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia – IFBA.\\
        
        \@Orientador %
        

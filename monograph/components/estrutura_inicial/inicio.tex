@@ -2,4 +2,23 @@
 \pagenumbering{roman}
 \onehalfspacing
 
+%%%% Capa
 \CapaPFC
+
+%%%% Folha de rosto
+\newpage\clearpage\pagebreak
+\ifpdf\phantomsection\fi
+\addcontentsline{toc}{chapter}{Folha de Rosto}
+\FolhaRosto
+
+%%%% Sumario
+\clearpage\pagebreak\newpage
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % capítulos do sumário com linha de pontos
+\tableofcontents
+
+
+\pagestyle{EstiloPFC} % estilo criado para este PFC
+\clearpage\pagebreak\newpage
+\onehalfspacing % espaçamento 1,5 entre linhas
+\pagenumbering{arabic}  % numeração das páginas em algarismos arábicos
+\makeatother %  restringir o uso do símbolo @ em comandos de macro
