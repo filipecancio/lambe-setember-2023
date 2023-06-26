@@ -190,7 +190,7 @@
    \fancyfoot[R]{\large \textbf{\thepage}} % texto do rodapé R
     % se é PFC 
     \ifbool{pfc}{
-        \fancyfoot[L]{\footnotesize{\textit{PFC - Engenharia Elétrica - COEEL}}} % texto do rodapé L
+        \fancyfoot[L]{\footnotesize{\textit{TCC - Sistemas de Informação}}} % texto do rodapé L
     }{}
     % se é RELATÓRIO 
 \ifbool{relatorio}{
@@ -366,7 +366,7 @@
   \begin{flushright}%
     \begin{minipage}{8.5cm}%
        {\singlespacing \normalsize 
-       Projeto de Monografia apresentado como requisito parcial de avaliação da disciplina Trabalho de Conclusão de Curso I, do curso de Sistemas de Informação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia.\\
+       Projeto de Monografia apresentado como requisito parcial de avaliação da disciplina Trabalho de Conclusão de Curso I, do curso de Sistemas de Informação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia - IFBA.\\
 
         \@Orientador }\\%
     \end{minipage}%
