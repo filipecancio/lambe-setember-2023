@@ -1,15 +1,13 @@
 name: Create TCC File
 
 on:
-  push:
-    branches: [ "main" ]
-
-  workflow_dispatch:
+  pull_request:
+    types:
+      - closed
 
 jobs:
-
-  build:
-
+  if_merged:
+    if: github.event.pull_request.merged == true && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -25,4 +23,4 @@ jobs:
       - name: Upload Release Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload v0 monograph/tcc-filipe-cancio.pdf
+        run: gh release upload v0.0 monograph/tcc-filipe-cancio.pdf
