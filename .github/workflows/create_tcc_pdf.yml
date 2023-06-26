@@ -29,6 +29,8 @@ jobs:
         with:
           name: tcc-cancio-${{ github.ref_name }}
           path: monograph/main.pdf
+
+      - name: cho ver
         run: ls
 
       - name: Upload Release Asset
