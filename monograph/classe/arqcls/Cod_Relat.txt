@@ -1,6 +1,0 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% DOCUMENTCLASS %%%%%%%%%
-%
-\documentclass[relatorio]{classe/cls-PFC-COEEL}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

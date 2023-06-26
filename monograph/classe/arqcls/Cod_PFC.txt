@@ -1,6 +1,0 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% DOCUMENTCLASS %%%%%%%%%
-%
-\documentclass[pfc]{classe/cls-PFC-COEEL}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
