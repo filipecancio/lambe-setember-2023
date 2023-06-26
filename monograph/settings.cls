@@ -366,7 +366,7 @@
   \begin{flushright}%
     \begin{minipage}{8.5cm}%
        {\singlespacing \normalsize 
-       Projeto de Monografia\\
+       Projeto de Monografia apresentado como requisito parcial de avaliação da disciplina Trabalho de Conclusão de Curso I, do curso de Sistemas de Informação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia – IFBA.\\
        
        \@Orientador %
        
