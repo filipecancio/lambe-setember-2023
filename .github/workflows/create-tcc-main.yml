@@ -1,8 +1,8 @@
 name: Create TCC File
 
 on:
-  pull_request:
-    branches: [ "feature/**" ]
+  push:
+    branches: [ "main" ]
 
   workflow_dispatch:
 
@@ -22,8 +22,7 @@ jobs:
           working_directory: monograph/
           continue_on_error: true
 
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
-        with:
-          name: tcc-cancio-${{ github.ref_name }}
-          path: monograph/tcc-filipe-cancio.pdf
+      - name: Upload Release Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload v0 monograph/tcc-filipe-cancio.pdf
