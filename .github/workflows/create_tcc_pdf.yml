@@ -33,7 +33,7 @@ jobs:
       - name: cho ver
         run: ls
 
-      - name: Upload Release Asset
+      - name: Upload Release Assett
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload testtag monograph/main.pdf
