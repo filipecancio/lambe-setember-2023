@@ -27,5 +27,5 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: tcc-lambe-filipe-cancio
+          name: tcc-cancio-${{ github.ref_name }}
           path: monograph/main.pdf
