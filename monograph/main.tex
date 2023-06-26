@@ -1,4 +1,4 @@
-\makeatletter % permitir que o símbolo @ seja usado em comandos de macro
+\makeatletter
 
 \documentclass[pfc]{settings}
 
@@ -8,7 +8,7 @@
 \input{components/estrutura_inicial/capa}
 
 \makeindex[columns=3, title=ÍNDICE REMISSIVO,
-    options= -s classe/estiloindice.ist]
+    options= -s classe/index_style.ist]
 
 \loadglsentries{components/estrutura_inicial/glossario.tex}
 \makeglossaries
@@ -25,9 +25,5 @@
     \renewcommand{\bibname}{REFERÊNCIAS}
     \bibliography{bibliography}
     \label{cap:RefBib}
-
-
-% \include{components/Seu_Trabalho}
-%\input{./classe/fim}
 
 \end{document}
